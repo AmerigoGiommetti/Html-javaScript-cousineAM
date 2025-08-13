@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+
+        <title>Cousine | Home</title>
+        <style>
+
+            
+
+            #title {
+                font-family: "La Belle Aurore", cursive;
+                text-align: center;
+                margin-bottom: 0px;
+                font-size: 70px;
+            }
+
+            .title-underline {
+                width: 30%;
+                height: auto;
+                margin: 0px;
+                left: 35%;
+                top: 100px;
+                position: absolute;
+            }
+
+            .big-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 35px;
+                margin-top: 100px;
+                /*height: 100%;*/
+            }
+
+            .small-container {
+                background-size: cover;
+                padding: 15px;
+                border-radius: 10px;
+                width: 30%;
+                height: 200px;
+                box-sizing: border-box;
+  
+                font-size: 22px;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+            }
+
+
+            #summerButton {
+                background-image: url("panzanella.webp");
+                color: black;
+                text-decoration: none;
+
+                transition: transform 0.3s ease;
+            }
+
+            #summerButton:hover {
+                transform: scale(1.15);
+            }
+
+            #autumnButton {
+                background-image: url("caldarroste.jpg");
+                color: black;
+                text-decoration: none;
+
+                transition: transform 0.3s ease;
+            }
+
+            #autumnButton:hover {
+                transform: scale(1.15);
+            }
+
+            #springButton {
+                background-image: url("fragole.jpg");
+                color: black;
+                text-decoration: none;
+
+                transition: transform 0.3s ease;
+            }
+
+            #springButton:hover {
+                transform: scale(1.15);
+            }
+
+            #winterButton {
+                background-image: url("spezzatino.jpg");
+                color: black;
+                text-decoration: none;
+
+                transition: transform 0.3s ease;
+            }
+
+            #winterButton:hover {
+                transform: scale(1.15);
+            }
+
+            #recipeButton {
+                background-image: url("ricettario.jpg");
+                color: black;
+                text-decoration: none;
+
+                transition: transform 0.3s ease;
+            }
+
+            #recipeButton:hover {
+                transform: scale(1.15);
+            }
+
+            #weeklyButton {
+                background-image: url("settimana.jpg");
+                color: black;
+                text-decoration: none;
+
+                transition: transform 0.3s ease;
+            }
+
+            #weeklyButton:hover {
+                transform: scale(1.15);
+            }
+
+            .buttonText {
+                border-radius: 10px;
+                padding: 2px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Rododendris cousine</h1>
+        <img src="underline.png" class="title-underline">
+        <div class="big-container">
+            <a id="springButton" class="small-container" style="text-align: left;" >
+                <div >
+                    <span class="buttonText" style="background-color: rgba(244, 80, 88, 0.8);">Spring recipes</span>
+                </div>
+            </a>
+            <a id="weeklyButton" class="small-container" style="align-content: center; text-align: center;">
+                 <div >
+                    <span class="buttonText" style="background-color: rgba(237, 226, 224, 0.8);">Random week</span>
+                </div>
+            </a>
+            <a id="summerButton" class="small-container" style="text-align: right;">
+                <div >
+                    <span class="buttonText" style="background-color: rgba(217, 172, 126, 0.8);">Summer recipes</span>
+                </div>
+            </a>
+            <a id="winterButton" class="small-container" style="align-content: end; text-align: left;">
+                <div >
+                    <span class="buttonText" style="background-color: rgba(253, 230, 152, 0.8);">Winter recipes</span>
+                </div>
+            </a>
+            <a id="recipeButton" class="small-container" style="align-content: center; text-align: center;" href="Rododendri-cousine-recipeList.html">
+                <div >
+                    <span class="buttonText" style="background-color: rgba(184, 184, 184, 0.8);">Recipe list</span>
+                </div>
+            </a>
+            <a id="autumnButton" class="small-container" style="align-content: end; text-align: right;">
+                <div >
+                    <span class="buttonText" style="background-color: rgba(239, 235, 146, 0.8);">Autumn recipes</span>
+                </div>
+            </a>
+        </div>
+    </body>
+</html>

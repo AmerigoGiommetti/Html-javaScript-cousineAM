@@ -1,0 +1,148 @@
+<!--<html>
+    <head>
+        <title>Cousine | Recipe list</title>
+        <style>
+            body {
+                background-color: blue;
+                justify-content: center;
+            }
+
+            #mainSection {
+                background-color: rgba(164, 231, 253, 0.701);
+                width: 80%;
+                display: block;
+            }
+
+            .highlight {
+                display: inline-block;
+                background-color: #f0f4ff;      /* Azzurro chiaro, delicato ma visibile */
+                border-left: 4px solid #3b82f6; /* Bordo sinistro blu per enfasi */
+                padding: 1em;
+                font-size: 1em;
+                line-height: 1.5;
+                border-radius: 0.4em;
+                color: #1e3a8a;                 /* Testo blu scuro */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lista delle ricette</h1>
+        <h1 class="highlight">
+                    Lorem Ipsum dolor sit amet
+                </h1>
+            <div id="mainSection">
+                
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie interdum risus id placerat. Quisque nec placerat magna. Sed dictum molestie mi eu molestie. Phasellus imperdiet libero at purus ultrices, nec lacinia sapien consectetur. Fusce tempus enim ex, feugiat pellentesque lorem pharetra a. Morbi et turpis id elit aliquet fermentum eget quis augue. Praesent porta porttitor nunc. Vestibulum congue, justo non elementum consectetur, massa nisi ullamcorper nunc, sed volutpat arcu quam eu augue.
+
+                    Nunc egestas in justo sit amet egestas. Pellentesque sagittis neque tincidunt justo sollicitudin, sit amet venenatis elit scelerisque. Aenean non commodo ligula, sed suscipit ante. Fusce porta, velit nec venenatis dapibus, quam quam suscipit neque, sed aliquam nunc lacus malesuada tortor. Integer laoreet augue fermentum ligula rutrum sagittis. Fusce accumsan, risus quis rhoncus fermentum, nibh felis ornare lacus, ut pharetra purus metus vel felis. Vestibulum gravida aliquet dolor sed placerat.
+
+                    Fusce nec consequat dolor. Duis elit diam, eleifend luctus tempor vitae, venenatis quis sapien. Quisque vel felis vel purus laoreet scelerisque ac in ligula. Cras tristique erat nec libero semper interdum. Nulla vel auctor ex, quis pretium erat. Phasellus venenatis lacus in felis commodo varius. Pellentesque facilisis lorem vitae egestas iaculis. Integer nisl erat, placerat non vulputate non, porta at nulla. Phasellus vitae nunc diam. Vivamus scelerisque sed odio in porttitor. Cras et risus nunc.
+
+                    Aliquam laoreet, lectus eget aliquam tempus, nibh orci consectetur lacus, vitae ultrices ligula elit lobortis augue. In in sapien dapibus, dapibus sem sed, volutpat diam. Fusce ut magna nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus eros a pellentesque iaculis. Fusce facilisis justo enim, at aliquet sem euismod in. Quisque porttitor enim at mollis malesuada.
+
+                    Nunc scelerisque ultricies leo et imperdiet. Praesent dapibus, sapien et gravida finibus, magna massa suscipit felis, et imperdiet eros lacus nec nulla. In vel auctor urna, et ultricies dui. Morbi ut felis eu risus auctor cursus vitae eget dui. Ut semper, felis ut sodales consectetur, velit metus feugiat augue, id tristique ligula ipsum a leo. Sed faucibus turpis sem, vel pellentesque elit condimentum sed. Aenean vulputate aliquam ante, at suscipit libero consectetur vitae. Ut non vestibulum magna, ut vulputate arcu.
+                </p>
+            </div>
+    </body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Rododendri Cousine - Lista Ricette</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+            color: #3c6e47;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e2f0d9;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .ricetta {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Lista Ricette - Rododendri Cousine</h1>
+
+<table id="tabellaRicette">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Stagione</th>
+            <th>Tipo Pasto</th>
+            <th>Carne</th>
+            <th>Pesce</th>
+            <th>Uova</th>
+            <th>Legumi</th>
+            <th>Latticini</th>
+            <th>Carboidrati</th>
+            <th>Verdure</th>
+            <th>Ricetta</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Qui verranno inserite le ricette -->
+    </tbody>
+</table>
+
+<script>
+    fetch('Recipes.json')
+        .then(response => {
+            if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
+            return response.json();
+        })
+        .then(data => {
+            const tbody = document.querySelector('#tabellaRicette tbody');
+            data.forEach(ricetta => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${ricetta.Nome}</td>
+                    <td>${ricetta.Stagione}</td>
+                    <td>${ricetta.TipoPasto}</td>
+                    <td>${ricetta.Carne ? '✅' : '❌'}</td>
+                    <td>${ricetta.Pesce ? '✅' : '❌'}</td>
+                    <td>${ricetta.Uova ? '✅' : '❌'}</td>
+                    <td>${ricetta.Legumi ? '✅' : '❌'}</td>
+                    <td>${ricetta.Latticini ? '✅' : '❌'}</td>
+                    <td>${ricetta.Carboidrati ? '✅' : '❌'}</td>
+                    <td>${ricetta.Verdure ? '✅' : '❌'}</td>
+                    <td class="ricetta">${ricetta.Ricetta}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Impossibile caricare le ricette.");
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+[
+  {
+    "Nome": "Insalata di riso",
+    "Stagione": "Estate",
+    "TipoPasto": "Pranzo",
+    "Carne": false,
+    "Pesce": true,
+    "Uova": false,
+    "Legumi": false,
+    "Latticini": false,
+    "Carboidrati": true,
+    "Verdure": true,
+    "Ricetta": "Lessare il riso, aggiungere tonno, verdure a cubetti, olio e sale."
+  },
+  {
+    "Nome": "Zuppa di legumi",
+    "Stagione": "Inverno",
+    "TipoPasto": "Cena",
+    "Carne": false,
+    "Pesce": false,
+    "Uova": false,
+    "Legumi": true,
+    "Latticini": false,
+    "Carboidrati": true,
+    "Verdure": true,
+    "Ricetta": "Cuocere i legumi con sedano, carota, cipolla e patate."
+  },
+  {
+    "Nome": "Frittata di spinaci",
+    "Stagione": "Primavera",
+    "TipoPasto": "Pranzo",
+    "Carne": false,
+    "Pesce": false,
+    "Uova": true,
+    "Legumi": false,
+    "Latticini": true,
+    "Carboidrati": false,
+    "Verdure": true,
+    "Ricetta": "Sbattere le uova, unire spinaci cotti, parmigiano e cuocere in padella."
+  }
+]
