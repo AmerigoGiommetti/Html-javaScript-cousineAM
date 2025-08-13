@@ -37,5 +37,18 @@
     "Carboidrati": false,
     "Verdure": true,
     "Ricetta": "Sbattere le uova, unire spinaci cotti, parmigiano e cuocere in padella."
+  },
+  {
+    "Nome": "Zuppa inglese",
+    "Stagione": "Estate",
+    "TipoPasto": "Dolce",
+    "Carne": false,
+    "Pesce": false,
+    "Uova": true,
+    "Legumi": false,
+    "Latticini": true,
+    "Carboidrati": false,
+    "Verdure": false,
+    "Ricetta": "Comprare savoiardi, fare crema, mettere in frigo e mangiare"
   }
 ]
